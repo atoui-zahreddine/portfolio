@@ -1,5 +1,5 @@
 module.exports = {
-  pathPrefix: '/reponame',
+  pathPrefix: '/portfolio',
   plugins: [
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,

@@ -6,7 +6,7 @@ import { Row, Col } from 'react-bootstrap';
 
 import ProjectImg from '../Image/ProjectImg';
 
-const Project = ({ project: { title, info, info2, url, repo, img, id } }) => {
+const Project = ({ project: { title, info, info2, url, repo, img, id, category } }) => {
   const [isDesktop, setIsDesktop] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -55,7 +55,7 @@ const Project = ({ project: { title, info, info2, url, repo, img, id } }) => {
           </div>
         </Fade>
       </Col>
-      <Col lg={8} sm={12}>
+      <Col lg={6} sm={8}>
         <Fade right={isDesktop} bottom={isMobile} duration={1000} delay={1000} distance="30px">
           <div className="project-wrapper__image">
             <a
@@ -98,6 +98,7 @@ Project.propTypes = {
     repo: PropType.string,
     img: PropType.string,
     id: PropType.string,
+    category: PropType.string,
   }),
 };
 
