@@ -6,7 +6,7 @@ import { Row, Col } from 'react-bootstrap';
 
 import ProjectImg from '../Image/ProjectImg';
 
-const Project = ({ project: { title, info, info2, url, repo, img, id, category } }) => {
+const Project = ({ project: { title, info, info2, url, repo, img, id } }) => {
   const [isDesktop, setIsDesktop] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
