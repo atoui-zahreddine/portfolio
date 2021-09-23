@@ -1,41 +1,64 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useMemo, useEffect } from 'react';
 import { Container, Row } from 'react-bootstrap';
 import PortfolioContext from '../../context/context';
 import Title from '../Title/Title';
 import Project from './Project';
 import Filter from './Filter/Filter';
+import Pagination from '../Pagination/Pagination';
 
-const categories = [
-  { name: 'Front End', id: 1 },
-  { name: 'Back End', id: 2 },
-  { name: 'Problem Solving', id: 3 },
-  { name: 'Other', id: 4 },
-];
+const PAGE_SIZE = 3;
+
+const paginate = (filteredProjects, currentPage) => {
+  return filteredProjects.slice(
+    (currentPage - 1) * PAGE_SIZE,
+    filteredProjects.length - (currentPage - 1) * PAGE_SIZE > PAGE_SIZE
+      ? (currentPage - 1) * PAGE_SIZE + PAGE_SIZE
+      : filteredProjects.length
+  );
+};
 
 const Projects = () => {
-  const { projects } = useContext(PortfolioContext);
+  const { projects, projectsCategories } = useContext(PortfolioContext);
 
-  const [selectedCategory, setSelectedCategory] = useState(1);
+  const [selectedCategory, setSelectedCategory] = useState();
+  const [currentPage, setCurrentPage] = useState();
 
-  const filteredProjects = projects.filter(({ category }) => category === selectedCategory);
+  const filteredProjects = useMemo(
+    () => projects.filter(({ category }) => category === selectedCategory),
+    [selectedCategory]
+  );
+  const showedProjects = useMemo(() =>
+    paginate(filteredProjects, currentPage, [filteredProjects, currentPage])
+  );
 
+  useEffect(() => {
+    setSelectedCategory(1);
+    setCurrentPage(1);
+  }, []);
   return (
     <section id="projects">
       <Container>
         <div className="project-wrapper">
           <Title title="Projects" />
           <Filter
-            categories={categories}
+            categories={projectsCategories}
             selectedCategory={selectedCategory}
             selectCategory={setSelectedCategory}
+            setCurrentPage={setCurrentPage}
           />
           {filteredProjects.length > 0 ? (
-            filteredProjects.map((project) => <Project key={project.id} project={project} />)
+            showedProjects.map((project) => <Project key={project.id} project={project} />)
           ) : (
             <Row className="justify-content-center">
               <p>No Projects</p>
             </Row>
           )}
+          <Pagination
+            currentPage={currentPage}
+            onPageChange={setCurrentPage}
+            itemsCount={filteredProjects.length}
+            pageSize={PAGE_SIZE}
+          />
         </div>
       </Container>
     </section>

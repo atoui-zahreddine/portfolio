@@ -40,7 +40,7 @@ export const aboutData = {
 };
 
 // PROJECTS DATA
-export const projectsCategories = [
+export const projectsCategoriesData = [
   { name: 'Front End', id: 1 },
   { name: 'Back End', id: 2 },
   { name: 'Problem Solving', id: 3 },

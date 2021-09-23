@@ -3,11 +3,14 @@ import Fade from 'react-reveal/Fade';
 import { Container, Row } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 
-const Filter = ({ categories, selectedCategory, selectCategory }) => {
+const Filter = ({ categories, selectedCategory, selectCategory, setCurrentPage }) => {
   const filters = categories.map((category) => (
     <button
       type="button"
-      onClick={() => selectCategory(category.id)}
+      onClick={() => {
+        selectCategory(category.id);
+        setCurrentPage(1);
+      }}
       key={category.id}
       className={`cta-btn cta-btn--hero mt-4 mr-4 p-4 ${
         category.id === selectedCategory ? 'cta-btn--hero__active' : ''
@@ -31,6 +34,7 @@ Filter.propTypes = {
   ),
   selectedCategory: PropTypes.number,
   selectCategory: PropTypes.func,
+  setCurrentPage: PropTypes.func,
 };
 
 export default Filter;

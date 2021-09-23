@@ -100,7 +100,7 @@ Project.propTypes = {
     repo: PropType.string,
     img: PropType.string,
     id: PropType.string,
-    category: PropType.string,
+    category: PropType.number,
   }),
 };
 
