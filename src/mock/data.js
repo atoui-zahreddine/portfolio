@@ -1,5 +1,13 @@
 import { nanoid } from 'nanoid';
 
+// Constants
+const CONSTANTS = {
+  FRONT: 1,
+  BACK: 2,
+  PS: 3,
+  OTHER: 4,
+};
+
 // HEAD DATA
 export const headData = {
   title: 'Zahreddine | atoui', // e.g: 'Name | Developer'
@@ -32,6 +40,13 @@ export const aboutData = {
 };
 
 // PROJECTS DATA
+export const projectsCategories = [
+  { name: 'Front End', id: 1 },
+  { name: 'Back End', id: 2 },
+  { name: 'Problem Solving', id: 3 },
+  { name: 'Other', id: 4 },
+];
+
 export const projectsData = [
   {
     id: nanoid(),
@@ -39,7 +54,7 @@ export const projectsData = [
     title: 'Doctor Appointment',
     info: 'Static design from figma community for doctor appointements  ',
     info2: 'Tech Used : React js , Tailwind css',
-    category: 'Front End',
+    category: CONSTANTS.FRONT,
     url: 'https://doctor-appoitment-1.netlify.app/',
     repo: 'https://github.com/atoui-zahreddine/doctor-appointment', // if no repo, the button will not show up
   },
@@ -49,29 +64,83 @@ export const projectsData = [
     title: 'Business Process Builder',
     info: 'Static design from dribbble for business process builder',
     info2: 'Tech Used : React js , CSS',
-    category: 'Front End',
+    category: CONSTANTS.FRONT,
     url: 'https://atoui-zahreddine.github.io/dribbble-template-clone-01/',
     repo: 'https://github.com/atoui-zahreddine/dribbble-template-clone-01', // if no repo, the button will not show up
+  },
+  {
+    id: nanoid(),
+    img: 'project4.png',
+    title: 'Online video converter',
+    info: 'Online video converter that converts webm videos to mp4',
+    info2: 'Tech Used : Express js , ejs , tailwindcss',
+    category: CONSTANTS.FRONT,
+    url: 'https://online-video-converter-1.herokuapp.com/',
+    repo: 'https://github.com/atoui-zahreddine/online-video-converter', // if no repo, the button will not show up
   },
   {
     id: nanoid(),
     img: 'project3.png',
     title: 'Online Burger Builder',
     info: 'Online burger builder for Ordering Burger',
-    info2: 'Tech Used : React js , CSS ',
-    category: 'Front End',
+    info2: 'Tech Used : React js , Redux , CSS ',
+    category: CONSTANTS.FRONT,
     url: 'https://burger-builder99.netlify.com/',
     repo: 'https://github.com/atoui-zahreddine/burgerBuilderFrontEnd', // if no repo, the button will not show up
   },
   {
     id: nanoid(),
     img: 'api.png',
+    title: 'API for Online Online video Converter',
+    info: 'API for converting videos from webm to mp4 ',
+    info2: 'Tech Used : Node Js ,Express Js ',
+    category: CONSTANTS.BACK,
+    repo: 'https://github.com/atoui-zahreddine/online-video-converter', // if no repo, the button will not show up
+  },
+  {
+    id: nanoid(),
+    img: 'api.png',
+    title: 'API for scrapping  Issatso website',
+    info: 'API for scrapping majors schedule from issatso university website',
+    info2: 'Tech Used : Node Js ,Express Js , cheerio , node-schedule',
+    category: CONSTANTS.BACK,
+    repo: 'https://github.com/atoui-zahreddine/issatso-schedule-scrapper', // if no repo, the button will not show up
+  },
+  {
+    id: nanoid(),
+    img: 'api.png',
     title: 'API for Online Burger Builder',
-    info: 'Online burger builder for Ordering Burger',
+    info: 'API for burger builder web app , it cover authentication ,  crud operations ',
     info2: 'Tech Used : Spring Boot , MySql , hibernate , Docker',
-    category: 'Back End',
-    url: 'https://burger-builder99.netlify.com/',
-    repo: 'https://github.com/atoui-zahreddine/burgerBuilderFrontEnd', // if no repo, the button will not show up
+    category: CONSTANTS.BACK,
+    repo: 'https://github.com/atoui-zahreddine/burgerBuilderBackend', // if no repo, the button will not show up
+  },
+  {
+    id: nanoid(),
+    img: 'api.png',
+    title: 'API for Hrayer Mobile App',
+    info: 'API for Hrayer mobile app , it cover authentication , crud operations  , Quote Notifcations .',
+    info2: 'Tech Used : Spring Boot , MySql , hibernate , Docker',
+    category: CONSTANTS.BACK,
+    repo: 'https://github.com/atoui-zahreddine/hack4her', // if no repo, the button will not show up
+  },
+  {
+    id: nanoid(),
+    img: 'problem-solving.png',
+    title: 'HashCode 2020  qualification round',
+    info: 'HashCode 2020  qualification round',
+    info2: 'Tech Used : C++',
+    category: CONSTANTS.PS,
+    repo: 'https://github.com/atoui-zahreddine/hashcode20', // if no repo, the button will not show up
+  },
+  {
+    id: nanoid(),
+    img: 'iot.jpeg',
+    title: 'IOT Based Monitoring System for Comatose Patients',
+    info: 'It gather realtime data from sensors linked with raspberry pi and send them to firebase to be consumed',
+    info2: 'Tech Used : python , raspberry pi 3',
+    category: CONSTANTS.OTHER,
+    repo: 'https://github.com/atoui-zahreddine/IOT-Based-Monitoring-System-for-Comatose-Patients', // if no repo, the button will not show up
   },
 ];
 

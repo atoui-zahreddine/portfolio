@@ -7,10 +7,10 @@ const Filter = ({ categories, selectedCategory, selectCategory }) => {
   const filters = categories.map((category) => (
     <button
       type="button"
-      onClick={() => selectCategory(category)}
+      onClick={() => selectCategory(category.id)}
       key={category.id}
       className={`cta-btn cta-btn--hero mt-4 mr-4 p-4 ${
-        category.id === selectedCategory.id ? 'cta-btn--hero__active' : ''
+        category.id === selectedCategory ? 'cta-btn--hero__active' : ''
       } `}
     >
       {category.name}
@@ -29,7 +29,7 @@ Filter.propTypes = {
   categories: PropTypes.arrayOf(
     PropTypes.shape({ name: PropTypes.string }, { id: PropTypes.number })
   ),
-  selectedCategory: PropTypes.shape({ name: PropTypes.string, id: PropTypes.number }),
+  selectedCategory: PropTypes.number,
   selectCategory: PropTypes.func,
 };
 

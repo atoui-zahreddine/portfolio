@@ -15,9 +15,9 @@ const categories = [
 const Projects = () => {
   const { projects } = useContext(PortfolioContext);
 
-  const [selectedCategory, setSelectedCategory] = useState({ name: 'Front End', id: 1 });
+  const [selectedCategory, setSelectedCategory] = useState(1);
 
-  const filteredProjects = projects.filter(({ category }) => category === selectedCategory.name);
+  const filteredProjects = projects.filter(({ category }) => category === selectedCategory);
 
   return (
     <section id="projects">
