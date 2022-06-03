@@ -50,6 +50,33 @@ export const projectsCategoriesData = [
 export const projectsData = [
   {
     id: nanoid(),
+    img: 'project5.png',
+    title: 'Miecolo Shop',
+    info: 'E-commerce Web application dedicated to selling bee hives connected systems to track geolocation and control weight, temperature and humidity of Apiary, With a dashboard to control and manage orders and products (Freelance).',
+    info2: 'Tech Used : Next JS, Redux, Redux Saga, i18n, Antd ',
+    category: CONSTANTS.FRONT,
+    url: 'https://shop.miecolo.biz/',
+  },
+  {
+    id: nanoid(),
+    img: 'project6.png',
+    title: 'Quantum Risk Calculator',
+    info: 'Website For Quantum Risk  Analysis (Freelance).',
+    info2: 'Tech Used : React js , Tailwind css',
+    category: CONSTANTS.FRONT,
+    url: 'https://deploy-preview-1--btq-qrc.netlify.app/',
+  },
+  {
+    id: nanoid(),
+    img: 'project7.png',
+    title: 'Azimuth ADV Website',
+    info: 'Static Website for advertising agency (Freelance)',
+    info2: 'Tech Used : HTML, JavaScript, Tailwind css',
+    category: CONSTANTS.FRONT,
+    url: 'http://www.azimuthadv.com.au/',
+  },
+  {
+    id: nanoid(),
     img: 'project1.png',
     title: 'Doctor Appointment',
     info: 'Static design from figma community for doctor appointements  ',
@@ -77,16 +104,6 @@ export const projectsData = [
     category: CONSTANTS.FRONT,
     url: 'https://online-video-converter-1.herokuapp.com/',
     repo: 'https://github.com/atoui-zahreddine/online-video-converter', // if no repo, the button will not show up
-  },
-  {
-    id: nanoid(),
-    img: 'project3.png',
-    title: 'Online Burger Builder',
-    info: 'Online burger builder for Ordering Burger',
-    info2: 'Tech Used : React js , Redux , CSS ',
-    category: CONSTANTS.FRONT,
-    url: 'https://burger-builder99.netlify.com/',
-    repo: 'https://github.com/atoui-zahreddine/burgerBuilderFrontEnd', // if no repo, the button will not show up
   },
   {
     id: nanoid(),
