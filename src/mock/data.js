@@ -32,11 +32,11 @@ export const aboutData = {
   
   I am passionate of websites and back-end coding. I like to play with codes and results the best output from my work. I have been working in web languages & technologies like the JavaScript , HTML, CSS , Node js , Java , Spring Frameworks .`,
   paragraphTwo:
-    'I can solve problems analytically and can face any complex situation with a motive of fixing it with total vividness. Also, I handle customers with a friend-like manner keeping myself within professionalism.',
+      'I can solve problems analytically and can face any complex situation with a motive of fixing it with total vividness. Also, I handle customers with a friend-like manner keeping myself within professionalism.',
   paragraphThree:
-    'So, I guarantee my enthusiasm in work and fulfilling my project with inexpressible efforts.',
+      'So, I guarantee my enthusiasm in work and fulfilling my project with inexpressible efforts.',
   resume:
-    'https://www.canva.com/design/DAEefxTqqEM/E7V86E1QoDCPytbSYpOptw/view?utm_content=DAEefxTqqEM&utm_campaign=designshare&utm_medium=link&utm_source=sharebutton', // if no resume, the button will not show up
+      'https://docs.google.com/document/d/1KhMjggZunMncDaq0fWpM0fKFo5KebgwvCCPWiN8ES6U/edit?usp=sharing', // if no resume, the button will not show up
 };
 
 // PROJECTS DATA
@@ -62,9 +62,9 @@ export const projectsData = [
     img: 'project6.png',
     title: 'Quantum Risk Calculator',
     info: 'Website For Quantum Risk  Analysis (Freelance).',
-    info2: 'Tech Used : React js , Tailwind css',
+    info2: 'Tech Used : Next js , Tailwind css',
     category: CONSTANTS.FRONT,
-    url: 'https://deploy-preview-1--btq-qrc.netlify.app/',
+    url: 'https://qbyte.btq.li/',
   },
   {
     id: nanoid(),
