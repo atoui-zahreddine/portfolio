@@ -12,14 +12,14 @@ const CONSTANTS = {
 export const headData = {
   title: 'Zahreddine | atoui', // e.g: 'Name | Developer'
   lang: '', // e.g: en, es, fr, jp
-  description: "I'm web developer , and this is my portfolio , welcome <3 <3 <3 .", // e.g: Welcome to my website
+  description: "I'm a Software Engineer, and this is my portfolio , welcome <3 <3 <3 .", // e.g: Welcome to my website
 };
 
 // HERO DATA
 export const heroData = {
   title: '',
   name: 'Zahreddine Atoui',
-  subtitle: 'A Software Engineer Student',
+  subtitle: 'Software Engineer',
   cta: '',
 };
 
@@ -30,13 +30,12 @@ export const aboutData = {
 
   My educational background possesses a Engineer's degree in Computer Science. Some effective on-job training make me more skilled in this field to work in any circumstances.
   
-  I am passionate of websites and back-end coding. I like to play with codes and results the best output from my work. I have been working in web languages & technologies like the JavaScript , HTML, CSS , Node js , Java , Spring Frameworks .`,
+  I am passionate about building web apps with well architetred server side logic. I like to play with codes and results the best output from my work. I have been working in web languages & technologies like the JavaScript, Node js, Java, Spring Frameworks .`,
   paragraphTwo:
       'I can solve problems analytically and can face any complex situation with a motive of fixing it with total vividness. Also, I handle customers with a friend-like manner keeping myself within professionalism.',
   paragraphThree:
       'So, I guarantee my enthusiasm in work and fulfilling my project with inexpressible efforts.',
-  resume:
-      'https://docs.google.com/document/d/1KhMjggZunMncDaq0fWpM0fKFo5KebgwvCCPWiN8ES6U/edit?usp=sharing', // if no resume, the button will not show up
+  resume: '', // if no resume, the button will not show up
 };
 
 // PROJECTS DATA
